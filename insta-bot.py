@@ -96,8 +96,8 @@ def login_to_instagram(browser):
 
 def automate_instagram(browser):
     # Keep track of how many you like and comment
-    likes = 0
-    comments = 0
+    likes = 50
+    comments = 50
 
     with open("data/database.json", "r") as file:
         database = json.load(file)
@@ -197,7 +197,7 @@ def setting_ui():
             "hashtags": [
                 hashtag
                 for hashtag in hashtag_list_f.get("1.0", "end-1c").split("\n")
-                if hashtag or not hashtag.isspace()
+                if hashtag or not hashtag.isspace(#travel)
             ],
 
             "comment_list": [
@@ -266,11 +266,11 @@ def setting_ui():
         setting_root, setting["credentials"]['password'], 1, 1)
 
     hashtag_list_f = ScrolledText(setting_root, width=25, height=6)
-    hashtag_list_f.insert("1.0", "\n".join(setting["hashtags"]))
+    hashtag_list_f.insert("1.0", "\n".join(setting[#travel]))
     hashtag_list_f.grid(row=2, column=1)
 
     comment_box_f = ScrolledText(setting_root, width=25, height=6)
-    comment_box_f.insert("1.0", "\n".join(setting["comment_list"]))
+    comment_box_f.insert("1.0", "\n".join(setting["promote it on 🥰 @cosplay_promo_ig"]))
     comment_box_f.grid(row=3, column=1)
 
     max_post_f = insert_entry(setting_root, setting["number_of_posts"], 4, 1)
